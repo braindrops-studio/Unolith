@@ -1,5 +1,4 @@
 ﻿using BrainDrops.Unolith.Inputs;
-using Unity.Services.Core;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,10 +6,9 @@ namespace Braindrops.Unolith.ServiceLocator
 {
     public class Bootstrapper : MonoBehaviour
     {
-        async void Start()
+        private void Start()
         {
             Application.runInBackground = true;
-            await UnityServices.InitializeAsync();
         }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
@@ -23,9 +21,12 @@ namespace Braindrops.Unolith.ServiceLocator
             if (SceneManager.GetSceneByName("Bootstrapper").isLoaded != true)
                 SceneManager.LoadScene("Bootstrapper");
             
+            GameObject servicesGo = new GameObject("Services");
+            DontDestroyOnLoad(servicesGo);
+            
             ServiceLocator.Initialize();
 
-            ServiceLocator.Instance.Register(FindObjectOfType<InputService>());
+            ServiceLocator.Instance.Register(servicesGo.AddComponent<InputService>());
             
             #if UNITY_EDITOR
             if (currentlyLoadedEditorScene.IsValid())
