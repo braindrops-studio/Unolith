@@ -1,6 +1,6 @@
 ﻿using CnControls;
 
-namespace BrainDrops.Unolith.Inputs
+namespace Braindrops.Unolith.Inputs
 {
     public class CNInputWrapper : InputProvider
     {

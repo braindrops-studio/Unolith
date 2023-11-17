@@ -1,8 +1,8 @@
-﻿using BrainDrops.Unolith.Attributes;
+﻿using Braindrops.Unolith.Attributes;
 using UnityEditor;
 using UnityEngine;
 
-namespace BrainDrops.Unolith.Editor
+namespace Braindrops.Unolith.Editor
 {
     [CustomPropertyDrawer(typeof(TagSelectorAttribute))]
     public class TagSelectorPropertyDrawer : PropertyDrawer

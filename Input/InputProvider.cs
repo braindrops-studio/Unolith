@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace BrainDrops.Unolith.Inputs
+namespace  Braindrops.Unolith.Inputs
 {
     public interface InputProvider
     {

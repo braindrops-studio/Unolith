@@ -1,7 +1,7 @@
 ﻿using Braindrops.Unolith.ServiceLocator;
 using UnityEngine;
 
-namespace BrainDrops.Unolith.Inputs
+namespace  Braindrops.Unolith.Inputs
 {
     public class InputService : MonoBehaviour, GameService
     {

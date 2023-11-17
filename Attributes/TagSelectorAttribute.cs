@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace BrainDrops.Unolith.Attributes
+namespace Braindrops.Unolith.Attributes
 {
     public class TagSelectorAttribute : PropertyAttribute
     {
