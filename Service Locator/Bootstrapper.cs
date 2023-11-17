@@ -1,4 +1,5 @@
-﻿using Braindrops.Unolith.Inputs;
+﻿using Braindrops.AdventureToolkit.Traversal.Locations;
+using Braindrops.Unolith.Inputs;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -27,6 +28,7 @@ namespace Braindrops.Unolith.ServiceLocator
             ServiceLocator.Initialize();
 
             ServiceLocator.Instance.Register(servicesGo.AddComponent<InputService>());
+            ServiceLocator.Instance.Register(new LocationTracker());
             
             #if UNITY_EDITOR
             if (currentlyLoadedEditorScene.IsValid())
