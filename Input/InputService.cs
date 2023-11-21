@@ -12,6 +12,7 @@ namespace  Braindrops.Unolith.Inputs
         public float VerticalInput { get; private set; }
         public bool IsPressingJump { get; private set; }
         public float VerticalInputRaw { get; private set; }
+        public bool IsPressingAttack { get; private set; }
 
         private void Awake()
         {
@@ -29,6 +30,7 @@ namespace  Braindrops.Unolith.Inputs
             VerticalInput = inputProvider.GetAxis("Vertical");
             VerticalInputRaw = inputProvider.GetAxisRaw("Vertical");
             IsPressingJump = inputProvider.IsButtonDown("Jump");
+            IsPressingAttack = inputProvider.IsButtonDown("Fire1");
         }
     }
 }
