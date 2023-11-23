@@ -10,6 +10,7 @@ namespace Braindrops.Unolith.ServiceLocator
         private void Start()
         {
             Application.runInBackground = true;
+            SceneManager.LoadSceneAsync("Game");
         }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]

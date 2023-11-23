@@ -16,7 +16,7 @@ namespace  Braindrops.Unolith.Inputs
 
         private void Awake()
         {
-            inputProvider = new UnityInputWrapper();
+            inputProvider = new CNInputWrapper();
         }
 
         public void DragItem(string itemName)
