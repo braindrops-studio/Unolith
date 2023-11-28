@@ -6,6 +6,7 @@ namespace Braindrops.Unolith.Sprites
     public class SpriteGroupFader : MonoBehaviour
     {
         [SerializeField] private SpriteRenderer[] sprites;
+        [SerializeField] private bool disableAfter = false;
 
         public float Alpha {
             get;
@@ -29,7 +30,7 @@ namespace Braindrops.Unolith.Sprites
             StopAllCoroutines();
             foreach (var sprite in sprites)
             {
-                StartCoroutine(ChangeAlphaGradually(sprite, targetAlpha, .2f, false));
+                StartCoroutine(ChangeAlphaGradually(sprite, targetAlpha, .2f, disableAfter));
             }
         }
 
